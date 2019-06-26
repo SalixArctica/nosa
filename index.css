@@ -1,0 +1,101 @@
+body {
+    font-family: Lato;
+    font-size: 130%;
+    margin: 0;
+    margin-bottom: 1000px;
+}
+
+.tooltip {
+    display: inline-block;
+    position: relative;
+    background: black;
+    color: white;
+    padding: .5rem;
+    border-radius: .5rem;
+    opacity: 0;
+    transition: all ease-in-out .5s;
+    width: 100%;
+    visibility: hidden;
+}
+
+.tooltip, .tooltipParent {
+}
+
+section {
+    display: inline;
+}
+
+.a {
+    display: inline;
+}
+
+
+a {
+    color: lightblue;
+}
+
+.tooltip:hover {
+    opacity: 1;
+}
+
+.tooltipParent {
+    display: inline;
+    position: relative;
+    text-decoration: underline;
+    z-index: 0;
+    font-style: italic;
+}
+
+.tooltipParent > p {
+    display: inline;
+    text-decoration: undeline;
+}
+
+.tooltip::after {
+    height: 0;
+    width: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid black;
+    border-top: 1rem solid transparent;
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: -1.5rem;
+}
+
+.tooltipParent:hover > .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+nav {
+    background: #97e5bd;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav > h1 {
+    margin: 1rem 2rem 1rem 2rem;
+}
+
+nav > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+
+nav > div > a {
+    color: black;
+    text-align: right;
+    align-self: center;
+    margin: 1rem;
+}
+
+.main {
+    margin: 2rem;
+}
